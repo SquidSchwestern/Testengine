@@ -86,7 +86,7 @@ namespace Testengine
                 {".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
                 {".",".","potion",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
                 {".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
-                {".",".","potionhp",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
+                {".",".","potionhp",".",".",".",".",".",".",".",".",".","bombsp",".",".","bomb","exp",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
                 {".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
                 {".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".", },
                 {".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".",".","inv",".",".",".", },
@@ -564,43 +564,43 @@ namespace Testengine
                 }
                 foreach (Vector i in Room.GetTiles("31"))
                 {
-                    tree1 = new Shape(i, new Vector(50, 50), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three1 = new Shape(i, new Vector(50, 50), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("32"))
                 {
-                    tree2 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three2 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("33"))
                 {
-                    tree3 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three3 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("34"))
                 {
-                    tree4 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three4 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("35"))
                 {
-                    tree5 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three5 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("36"))
                 {
-                    tree6 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three6 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("37"))
                 {
-                    tree7 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three7 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("38"))
                 {
-                    tree8 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three8 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("39"))
                 {
-                    tree9 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three9 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("30"))
                 {
-                    tree0 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
+                    three0 = new Shape(i, new Vector(500, 500), Color.Yellow, true, "inventory", Type.Quad, null);
                 }
                 foreach (Vector i in Room.GetTiles("Gold"))
                 {
@@ -622,8 +622,20 @@ namespace Testengine
                 {
                     shot = new Shape(i, new Vector(50, 50), Color.Red, true, "shot", Type.Sprite, new Bitmap(@"C:\Users\PC\Documents\Home\shot.png"));
                 }
-                
-                Window.Invalidate();
+                foreach (Vector i in Room.GetTiles("bombsp"))
+                {
+                    bombsp = new Shape(i, new Vector(50, 50), Color.Black, true, "bombsp", Type.Sprite, new Bitmap(@"C:\Users\PC\Documents\Home\bomb.png"));
+                }
+                foreach (Vector i in Room.GetTiles("bomb"))
+                {
+                    bomb = new Shape(i, new Vector(50, 50), Color.Black, true, "bomb", Type.Sprite, new Bitmap(@"C:\Users\PC\Documents\Home\bomb.png"));
+                }
+                foreach (Vector i in Room.GetTiles("exp"))
+                {
+                    exp = new Shape(i, new Vector(150, 150), Color.Black, true, "explosion", Type.Sprite, new Bitmap(@"C:\Users\PC\Documents\Home\explosion.png"));
+                }
+
+                    Window.Invalidate();
             }
         }
         
@@ -659,23 +671,28 @@ namespace Testengine
         Shape two8;
         Shape two9;
         Shape two0;
-        Shape tree2;
-        Shape tree3;
-        Shape tree1;
-        Shape tree4;
-        Shape tree5;
-        Shape tree6;
-        Shape tree7;
-        Shape tree8;
-        Shape tree9;
-        Shape tree0;
+        Shape three2;
+        Shape three3;
+        Shape three1;
+        Shape three4;
+        Shape three5;
+        Shape three6;
+        Shape three7;
+        Shape three8;
+        Shape three9;
+        Shape three0;
         Shape sign;
         Shape cell1;
         Shape cell2;
         Shape cell3;
         Shape p;
         Shape shot;
+        Shape bomb;
+        Shape bombsp;
+        Shape exp;
         int t;
+        int tb;
+        
         
         public Player pl = new Player(100, 10, 0, "staff");
         public Player enm = new Player(20, 1, 0, "hand");
@@ -685,13 +702,10 @@ namespace Testengine
             Random rnd = new Random();
             if (p.IsCollided(p, "enemy"))
             {
-                
                 pl.hp = pl.hp - (enm.dmg-pl.armr);
                 pl.money += rnd.Next(10, 25);
                 e.Tag = "Enemydefeated";
                 e.image = new Bitmap(@"C:\Users\PC\Documents\Home\enemydown.png");
-
-
             }
             if (p.IsCollided(p, "weapon"))
             {
@@ -704,6 +718,14 @@ namespace Testengine
                 pl.secwpn = "potion";
                 potion.Position.X = 10000;
                 potion.Position.Y = 10000;
+            }
+            if (p.IsCollided(p, "bombsp"))
+            {
+                pl.secwpn = "bombs";
+                pl.bc += 1;
+                bombsp.Position.X = 10000;
+                bombsp.Position.Y = 10000;
+                
             }
             if (p.IsCollided(p, "potionhp"))
             {
@@ -721,7 +743,22 @@ namespace Testengine
                         pl.secwpn = null;
                         break;
                     case "bombs":
-
+                        if ((pl.bc > 0) && (pl.bcd == 0))
+                        {
+                            tb = 30;
+                            pl.bcd = 35;
+                            bomb.Position.X = p.Position.X;
+                            bomb.Position.Y = p.Position.Y;
+                            if (pl.bc == 1)
+                            {
+                                pl.bc = 0;
+                                pl.secwpn = null;
+                            }
+                            else
+                            {
+                                pl.bc -= 1;
+                            }
+                        }
                         break;
                     case "potionhp":
                         pl.hp += 50;
@@ -796,7 +833,7 @@ namespace Testengine
                 }
                 else p.Position.Y -= pl.spd;
             }
-            if (S)                                            // Передвижение
+            if (S)                                            // Movement
             {
                 pl.direction = "down";
                 if (p.IsCollided(p, "wallu"))
@@ -844,6 +881,11 @@ namespace Testengine
                             e.image = new Bitmap(@"C:\Users\PC\Documents\Home\enemydown.png");
                         }
                     }
+                    if (tb > 15)
+                    {
+                        bomb.Position.X -= 25;
+                    }
+                    
                     if (t <= 0)
                     {
                         shot.Position.X = 10000;
@@ -861,6 +903,10 @@ namespace Testengine
                             t = 0;
                             e.Tag = "defeated";
                         }
+                    }
+                    if (tb > 15)
+                    {
+                        bomb.Position.X += 25;
                     }
                     if (t <= 0)
                     {
@@ -881,6 +927,10 @@ namespace Testengine
                             e.Tag = "defeated";
                         }
                     }
+                    if (tb > 15)
+                    {
+                        bomb.Position.Y -= 25;
+                    }
                     if (t <= 0)
                     {
                         shot.Position.X = 10000;
@@ -890,7 +940,7 @@ namespace Testengine
                 case "down":
                     if (t > 0)
                     {
-                        shot.Position.Y += 25;
+                        shot.Position.Y += 15;
                         if (shot.IsCollided(shot, "enemy"))
                         {
                             shot.Position.X = 10000;
@@ -899,6 +949,10 @@ namespace Testengine
                             e.Tag = "defeated";
                         }
                     }
+                    if (tb > 15)
+                    {
+                        bomb.Position.Y += 25;
+                    }
                     if (t <= 0)
                     {
                         shot.Position.X = 10000;
@@ -906,229 +960,30 @@ namespace Testengine
                     }
                     break;
             }
-            //if (LM)
-            //{
-
-            //if (pl.wpn == "staff")
-            //{
-            // if (pl.wpncd == 0)
-            //{
-
-            //if (mousePosition.X > p.Position.X)
-            //{
-            //if (mousePosition.Y > p.Position.Y)
-            //{
-            // double Sx = mousePosition.X - p.Position.X;
-            // double Sy = mousePosition.Y - p.Position.Y;
-            // if (Sx > Sy)
-            //{
-            //  float Sa = (float)Sx / 25;
-            // float Sb = (float)Sy / Sa;
-            // int t = (int)Sa;
-            // shot.Position.X = p.Position.X;
-            // shot.Position.Y = p.Position.Y;
-            // while (t > 0)
-            //{
-            // shot.Position.X += 25;
-            // shot.Position.Y += Sb;
-            // t -= 1;
-            // }
-            // pl.wpncd = 120;
-            // }
-            // else if (Sx < Sy)
-            // {
-            // float Sb = (float)Sy / 25;
-            // float Sa = (float)Sx / Sb;
-            // int t = (int)Sb;
-            // shot.Position.X = p.Position.X;
-            // shot.Position.Y = p.Position.Y;
-            // while (t > 0)
-            // {
-            //   shot.Position.Y += 25;
-            //   shot.Position.X += Sa;
-            //    t -= 1;
-            // }
-            // pl.wpncd = 120;
-            // }
-            // else if (Sx == Sy)
-            // {
-            // float Sa = (float)Sx / 25;
-            // int t = (int)Sa;
-            // shot.Position.X = p.Position.X;
-            // shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            //  {
-            //   shot.Position.X += 25;
-            //    shot.Position.Y += 25;
-            //    t -= 1;
-            // }
-
-            //  pl.wpncd = 120;
-            //  }
-
-            // }
-            //  else if (mousePosition.Y < p.Position.Y)
-            // {
-            //  double Sx = mousePosition.X - p.Position.X;
-            //  double Sy = p.Position.Y - mousePosition.Y;
-            //  if (Sx > Sy)
-            //  {
-            //   float Sa = (float)Sx / 25;
-            //    float Sb = (float)Sy / Sa;
-            //    int t = (int)Sa;
-            //    shot.Position.X = p.Position.X;
-            //    shot.Position.Y = p.Position.Y;
-            //    while (t > 0)
-            //    {
-            //       shot.Position.X += 25;
-            //       shot.Position.Y -= Sb;
-            //       t -= 1;
-            //   }
-            //   pl.wpncd = 120;
-            //  }
-            //  else if (Sx < Sy)
-            // {
-            //  float Sb = (float)Sy / 25;
-            //  float Sa = (float)Sx / Sb;
-            //  int t = (int)Sb;
-            //  shot.Position.X = p.Position.X;
-            //  shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            //  {
-            //     shot.Position.Y += 25;
-            //     shot.Position.X -= Sa;
-            //     t -= 1;
-            //  }
-            //  pl.wpncd = 120;
-            //  }
-            //  else if (Sx == Sy)
-            // {
-            //  float Sa = (float)Sx / 25;
-            //  int t = (int)Sa;
-            //  shot.Position.X = p.Position.X;
-            //  shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            //  {
-            //      shot.Position.X += 25;
-            //      shot.Position.Y -= 25;
-            //      t -= 1;
-            //  }
-            //    pl.wpncd = 120;
-            //   }
-            //  }
-            //  }
-            // else if (mousePosition.X < p.Position.X)
-            // {
-            // if (mousePosition.Y > p.Position.Y)
-            //  {
-            //  double Sx = p.Position.X - mousePosition.X;
-            //   double Sy = mousePosition.Y - p.Position.Y;
-            //   if (Sx > Sy)
-            //  {
-            //   float Sa = (float)Sx / 25;
-            //   float Sb = (float)Sy / Sa;
-            //   int t = (int)Sa;
-            //   shot.Position.X = p.Position.X;
-            //   shot.Position.Y = p.Position.Y;
-            //    while (t > 0)
-            //    {
-            //        shot.Position.X -= 25;
-            //        shot.Position.Y += Sb;
-            //        t -= 1;
-            //    }
-            //    pl.wpncd = 120;
-            //   }
-            //  else if (Sx < Sy)
-            //  {
-            //    float Sb = (float)Sy / 25;
-            //   float Sa = (float)Sx / Sb;
-            //   int t = (int)Sb;
-            //   shot.Position.X = p.Position.X;
-            //   shot.Position.Y = p.Position.Y;
-            //   while (t > 0)
-            //   {
-            //      shot.Position.Y += 25;
-            //      shot.Position.X -= Sa;
-            //      t -= 1;
-            //  }
-            //   pl.wpncd = 120;
-            //  }
-            // else if (Sx == Sy)
-            // {
-            //  float Sa = (float)Sx / 25;
-            //  int t = (int)Sa;
-            //  shot.Position.X = p.Position.X;
-            //  shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            // {
-            //     shot.Position.X -= 25;
-            //     shot.Position.Y += 25;
-            //     t -= 1;
-            //  }
-            //   pl.wpncd = 120;
-            //  }
-            // }
-            // else if (mousePosition.Y < p.Position.Y)
-            // {
-            // double Sx = p.Position.X - mousePosition.X;
-            //  double Sy = p.Position.Y - mousePosition.Y;
-            //  if (Sx > Sy)
-            //  {
-            //  float Sa = (float)Sx / 25;
-            //   float Sb = (float)Sy / Sa;
-            //   int t = (int)Sa*30;
-            //   shot.Position.X = p.Position.X;
-            //   shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            //  {
-            //      shot.Position.X -= 25;
-            //      shot.Position.Y -= Sb;
-            //      t -= 1;
-            //   }
-            //    pl.wpncd = 120;
-            //  }
-            //  else if (Sx < Sy)
-            //  {
-            //  float Sb = (float)Sy / 25;
-            //  float Sa = (float)Sx / Sb;
-            //  int t = (int)Sb;
-            //  shot.Position.X = p.Position.X;
-            //  shot.Position.Y = p.Position.Y;
-            //  while (t > 0)
-            //  {
-            //      shot.Position.Y -= 25;
-            //     shot.Position.X -= Sa;
-            //     t -= 1;
-            // }
-            //  pl.wpncd = 120;
-            //  }
-            //  else if (Sx == Sy)
-            //  {
-            //   float Sa = (float)Sx / 25;
-            //   int t = (int)Sa;
-            //   shot.Position.X = p.Position.X;
-            //   shot.Position.Y = p.Position.Y;
-            //   while (t > 0)
-            //  {
-            //      shot.Position.X -= 25;
-            //      shot.Position.Y -= 25;
-            //      t -= 1;
-            //  }
-            //  pl.wpncd = 120;
-            //   }
-            //  }
-            //}
-
-            // }
-            // }
-            //  }
-            
-            if (E)                                            // окно инвенторя
+            if (tb == 4)
+            {
+                exp.image = new Bitmap(@"C:\Users\PC\Documents\Home\explosion.png");
+                exp.Position.X = bomb.Position.X-50;
+                exp.Position.Y = bomb.Position.Y-50;
+                bomb.Position.X = 10000;
+                bomb.Position.Y = 10000;
+               
+            }
+            if (tb == 3)
+            {
+                exp.image = new Bitmap(@"C:\Users\PC\Documents\Home\smoke.png");
+            }
+            if (tb <= 0)
+            {                
+                exp.Position.X = 10000;
+                exp.Position.Y = 10000;
+            }
+            if (E)                                            // inventory
             {
                 inv.Position.X = p.Position.X-250;
                 inv.Position.Y = p.Position.Y-250;
                 int fir = pl.money % 10;
-                int sec = (int)((pl.money % 100) * 0.1);
+                int sec = (int)(pl.money % 100 * 0.1);
                 sign.Position.X = p.Position.X - 100;
                 sign.Position.Y = p.Position.Y;
                 cell2.Position.X = p.Position.X;
@@ -1145,6 +1000,9 @@ namespace Testengine
                     case "axe":
                         cell1.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_axe.png");
                         break;
+                    case "staff":
+                        cell1.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_staff.png");
+                        break;
                     default:
                         cell1.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_empty.png");
                         break;
@@ -1156,6 +1014,30 @@ namespace Testengine
                         break;
                     case "potionhp":
                         cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_potionhp.png");
+                        break;
+                    case "bombs":
+                        switch (pl.bc)
+                        {
+                            case 1:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb.png");
+                                break;
+                            case 2:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb2.png");
+                                break;
+                            case 3:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb3.png");
+                                break;
+                            case 4:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb4.png");
+                                break;
+                            case 5:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb5.png");
+                                break;
+                            default:
+                                cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_bomb.png");
+                                break;
+                        }    
+                        
                         break;
                     default:
                         cell2.image = new Bitmap(@"C:\Users\PC\Documents\Home\inv_empty.png");
@@ -1313,6 +1195,14 @@ namespace Testengine
             if (t > 0)
             {
                 t -= 1;
+            }
+            if (pl.bcd > 0)
+            {
+                pl.bcd -= 1;
+            }
+            if (tb >= 0)
+            {
+                tb -= 1;
             }
             if (enm.count > 0)
             {

@@ -70,7 +70,7 @@ namespace Testengine
             Window = new Canvas();
             Window.Size = new System.Drawing.Size((int)ScreenSize.X, (int)ScreenSize.Y);
             Window.Text = this.Title;
-            Window.Paint += Renderer;                            //Создание Окна
+            Window.Paint += Renderer;                            
             GameLoopThread = new Thread(GameLoop);
             GameLoopThread.SetApartmentState(ApartmentState.STA);
             GameLoopThread.Start();
@@ -81,7 +81,7 @@ namespace Testengine
         {
             if (s != null)
             {
-                RenderStack.Add(s);                     //Рендер
+                RenderStack.Add(s);                     
             }
         }
         public static void ClearRoom()
@@ -109,7 +109,7 @@ namespace Testengine
                 try
                 {
                     W = ((Keyboard.GetKeyStates(Key.W) & KeyStates.Down) > 0) ? true : false;
-                    A = ((Keyboard.GetKeyStates(Key.A) & KeyStates.Down) > 0) ? true : false;   //Проверка нажатий клавиш
+                    A = ((Keyboard.GetKeyStates(Key.A) & KeyStates.Down) > 0) ? true : false;   
                     S = ((Keyboard.GetKeyStates(Key.S) & KeyStates.Down) > 0) ? true : false;
                     D = ((Keyboard.GetKeyStates(Key.D) & KeyStates.Down) > 0) ? true : false;
                     E = ((Keyboard.GetKeyStates(Key.E) & KeyStates.Down) > 0) ? true : false;
@@ -132,7 +132,7 @@ namespace Testengine
         //    if (e.Button == MouseButtons.Left)
         //    {
         //        //Console.WriteLine("Левая кнопка");
-        //    }                                                            //Спам при нажатии мышки FUCKING DIES
+        //    }                                                            
         //    else if (e.Button == MouseButtons.Right)
         //    {
         //        Console.WriteLine("Правая кнопка");
@@ -149,14 +149,14 @@ namespace Testengine
             {
                 if (s.type == Type.Quad)
                 {
-                    // Смещаем координаты объекта на противоположное относительно камеры значение
+                    
                     int x = (int)(s.Position.X - CameraPositionX);
                     int y = (int)(s.Position.Y - CameraPositionY);
                     g.FillRectangle(new SolidBrush(s.color), x, y, (int)s.Scale.X, (int)s.Scale.Y);
                 }
                 if (s.type == Type.Sprite)
                 {
-                    // Аналогично для спрайтов
+                    
                     int x = (int)(s.Position.X - CameraPositionX);
                     int y = (int)(s.Position.Y - CameraPositionY);
                     g.DrawImageUnscaledAndClipped(s.image, new Rectangle(x, y, (int)s.Scale.X, (int)s.Scale.Y));

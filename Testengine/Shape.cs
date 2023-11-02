@@ -20,7 +20,7 @@ namespace Testengine
         {
             Position = position;
             Scale = scale;
-            this.color = color;        //Конструктор  квадрата
+            this.color = color;        
             Tag = tag;
             this.type = type;
             this.image = image;
@@ -34,7 +34,7 @@ namespace Testengine
             {
                 if (s.Position.Y + s.Scale.Y > shape.Position.Y && shape.Position.Y + shape.Scale.Y > s.Position.Y
                     && s.Position.X + s.Scale.X > shape.Position.X && shape.Position.X + shape.Scale.X > s.Position.X)
-                {         //Проверка на Коллизию
+                {         
                     return true;
                 }
             }

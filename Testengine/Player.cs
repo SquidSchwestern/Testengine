@@ -21,7 +21,8 @@ namespace Testengine
         public int spd;
         public int money;
         public int mana;
-        public List<string> inventory;
+        public int bc;
+        public int bcd;
         public Player(int hp, int armr, int lvl, string wpn)
         {
             this.hp = hp;
@@ -31,6 +32,8 @@ namespace Testengine
             this.money = 0;
             this.spd = 5;
             this.mana = 100;
+            this.bc = 0;
+            this.bcd = 0;
         }
         public int ReceiveDamage(int dmg)
         {
@@ -52,31 +55,6 @@ namespace Testengine
             }
             else return (dmg - armr);
         }
-        public void GetWeapon(string wpn)
-        {
-            switch (wpn)
-            {
-                case "sword":
-                    this.dmg = 20;
-                    this.spd = 2;
-                    break;
-                case "axe":
-                    this.dmg = 50;
-                    this.spd = 1;
-                    break;
-                case "bow":
-                    this.dmg = 25;
-                    this.spd = 1;
-                    break;
-                case "hand":
-                    this.dmg = 10;
-                    this.spd = 3;
-                    break;
-                default:
-                    this.dmg = 0;
-                    this.spd = 0;
-                    break;
-            }
-        }
+        
     }
 }
